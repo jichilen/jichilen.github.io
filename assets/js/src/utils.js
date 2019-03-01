@@ -17,7 +17,7 @@ NexT.utils = NexT.$u = {
         if ($imageWrapLink.size() < 1) {
 	        var imageLink = ($image.attr('data-original')) ? this.getAttribute('data-original') : this.getAttribute('src');
           imageLink=imageLink.substr(2)
-          ($image.attr('data-original')) ? this.getAttribute('data-original') : this.setAttribute('src',imageLink)
+          this.setAttribute('src',imageLink)
           $imageWrapLink = $image.wrap('<a href="' + imageLink + '"></a>').parent('a');
         }
 

@@ -23,7 +23,9 @@ icon: icon-html
 
  这篇文章将**图像生成过程**加入到识别网络中来，这样就可以运用**生成判别模型**，在识别的时候利用没有经过扭曲变换的原图也加入训练过程中作为监督信息
 
- <img src="../assets/img/paper-1_1.jpg" style="zoom:100%">
+<img src="../assets/img/paper-1_1.jpg" style="zoom:100%">
+
+<img src="/assets/img/paper-1_1.jpg" style="zoom:100%">
 
 ###    新词汇
 

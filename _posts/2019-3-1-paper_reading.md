@@ -11,7 +11,7 @@ icon: icon-html
 
 
 
-### [Synthetically Supervised Feature Learning for Scene Text Recognition](https://link.springer.com/chapter/10.1007%2F978-3-030-01228-1_27)
+###    [Synthetically Supervised Feature Learning for Scene Text Recognition](https://link.springer.com/chapter/10.1007%2F978-3-030-01228-1_27)
 
 <p style="font-size: 14px">Yang Liu, Zhaowen Wang, Hailin Jin and Ian Wassell </p>
 
@@ -27,7 +27,7 @@ icon: icon-html
 
 ![1](/_posts/img/paper-1_1.jpg)
 
-###  新词汇
+###    新词汇
 
 |                                          |      |
 | :--------------------------------------- | ---- |

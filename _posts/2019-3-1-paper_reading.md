@@ -11,7 +11,7 @@ icon: icon-html
 
 
 
- ### [Synthetically Supervised Feature Learning for Scene Text Recognition](https://link.springer.com/chapter/10.1007%2F978-3-030-01228-1_27)
+### [Synthetically Supervised Feature Learning for Scene Text Recognition](https://link.springer.com/chapter/10.1007%2F978-3-030-01228-1_27)
 
 <p style="font-size: 14px">Yang Liu, Zhaowen Wang, Hailin Jin and Ian Wassell </p>
 
@@ -23,11 +23,9 @@ icon: icon-html
 
  这篇文章将**图像生成过程**加入到识别网络中来，这样就可以运用**生成判别模型**，在识别的时候利用没有经过扭曲变换的原图也加入训练过程中作为监督信息
 
- <img src="https://github.com/jichilen/jichilen.github.io/tree/master/_posts/img/paper-1_1.jpg" style="zoom:100%"></img>
+ <img src="./img/paper-1_1.jpg" style="zoom:100%"></img>
 
-
-
- ### 新词汇
+###  新词汇
 
 |                                          |      |
 | :--------------------------------------- | ---- |

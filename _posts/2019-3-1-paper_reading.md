@@ -25,6 +25,8 @@ icon: icon-html
 
  <img src="/_posts/img/paper-1_1.jpg" style="zoom:100%"></img>
 
+![1](/_posts/img/paper-1_1.jpg)
+
 ###  新词汇
 
 |                                          |      |

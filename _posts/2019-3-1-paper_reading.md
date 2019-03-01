@@ -1,4 +1,18 @@
+---
+layout: post
+title:  "Synthetically Supervised Feature Learning for Scene Text Recognition"
+date:   2019-3-1
+desc: "Synthetically Supervised Feature Learning for Scene Text Recognition"
+keywords: "python"
+categories: [Html]
+tags: [reading]
+icon: icon-html
+---
+
+
+
  ### [Synthetically Supervised Feature Learning for Scene Text Recognition](https://link.springer.com/chapter/10.1007%2F978-3-030-01228-1_27)
+
 <p style="font-size: 14px">Yang Liu, Zhaowen Wang, Hailin Jin and Ian Wassell </p>
 
 <p style="font-size: 12px">Computer Laboratory, University of Cambridge, UK</p>

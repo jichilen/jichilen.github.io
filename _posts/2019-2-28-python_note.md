@@ -4,7 +4,7 @@ title:  "python note"
 date:   2019-2-28
 desc: "something about python decorator"
 keywords: "python"
-categories: [PYTHON,Python,python]
+categories: [PYTHON]
 tags: [python,coding,learning,decorator]
 icon: icon-html
 ---

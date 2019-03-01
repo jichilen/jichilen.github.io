@@ -4,7 +4,7 @@ title:  "leetcode"
 date:   2019-2-28
 desc: "leetcode problem"
 keywords: "python"
-categories: [PYTHON,Python,python]
+categories: [PYTHON]
 tags: [python,coding,leetcode ]
 icon: icon-html
 ---

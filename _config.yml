@@ -214,7 +214,7 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  GitHub: https://github.com/WendellGul
+  GitHub: https://github.com/jichilen
 
 
 # Social Links Icons
@@ -233,7 +233,7 @@ social_icons:
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-avatar: /assets/images/GU.png
+# avatar: /assets/images/GU.png
 
 
 # Table Of Contents in the Sidebar
@@ -435,7 +435,7 @@ gitalk:
 #google_site_verification:
 
 # Google Analytics
-google_analytics: UA-127303679-1
+# google_analytics: UA-127303679-1
 
 # Yandex Webmaster tools verification setting
 # See: https://webmaster.yandex.ru/
@@ -496,7 +496,7 @@ rating:
 # Show number of visitors to each article.
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
-  enable: true
+  enable: false
   app_id: x4QiSbzWDlQXcNEcFFsJuwJo-gzGzoHsz
   app_key: nO4kBCjInYWmVIPjiYdpQRid
 
@@ -710,8 +710,8 @@ images: assets/images
 # Theme version
 version: 5.1.1
 
-reward_comment: 此时不赞何时赞！
-wechatpay: /assets/images/wechatpay.jpeg
-alipay: /assets/images/alipay.jpeg
+# reward_comment: 此时不赞何时赞！
+# wechatpay: /assets/images/wechatpay.jpeg
+# alipay: /assets/images/alipay.jpeg
 
-repository: wendellgul/wendellgul.github.io
+repository: jichilen/jichilen.github.io

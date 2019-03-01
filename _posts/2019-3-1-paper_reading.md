@@ -25,7 +25,7 @@ icon: icon-html
 
 <img src="../assets/img/paper-1_1.jpg" style="zoom:100%">
 
-<img src="/assets/img/paper-1_1.jpg" style="zoom:100%">
+
 
 ###    新词汇
 

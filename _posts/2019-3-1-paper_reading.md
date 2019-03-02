@@ -41,9 +41,55 @@ R用于从文字生成带文字的图片，根据参数的不同可以生成带�
 
 #### Encoder and Text Decoder
 
-E和D一起组成了一个常规的文字识别网络，这一部分的实现是按照CRNN来的，简单的来说CRNN是一个利用CNN层提取图像特征然后使用RNN层进行解码的过程，因为RNN的输出结果是一个序列，这正和我们最后需要得到的结果是一致的。
+E和D一起组成了一个常规的文字识别网络，这一部分的实现是按照CRNN来的，简单的来说CRNN是一个利用CNN层提取图像特征然后使用RNN层进行解码的过程，因为RNN的输出结果是一个序列，这正和我们最后需要得到的结果是一致的。但是由于RNN的输出是定长的，而我们的输出是变长的，所以我们需要进行进一步的解码，这个时候一个CTC的结构就显得很重要。
 
-###    新词汇
+<img src="..\assets\img\paper-1_2.jpg" style="zoom:60%">
+
+CTC的主要思想来源于对未对齐的序列进行监督，主要是寻找相邻序列中的峰值，使得峰值的序列和目标序列匹配的过程。所以CTC并不是寻找理论上最优解的过程，他只需要使得所有可能序列的概率之和达到最大即可。
+$$
+max_wp(z|y=N_w(x))=p(z|x)=\sum_{B(\pi)=z}P(\pi|x)
+$$
+CTC的优化目标为上式，z表示目标序列，y表示RNN或者GNN的输出序列，$\pi$表示输出序列，B表示CTC中的变换。所有可能的序列$B(\pi)=z$如下图所示
+
+<img src="..\assets\img\paper-1_3.jpg" style="zoom:60%">
+
+该过程和马尔科夫链非常近似，所以上式的梯度求解也用到了前向后向算法
+
+#### Feature matching and image generator
+
+根据前面所提到的，一个优秀的E和G必须满足不变性和完备性。所以有两个新的监督信息
+$$
+\min\limits_E L_f=||E(x)-E(\bar x)||_2
+\\
+\min\limits_{EG} L_g=||G(E(x))-\bar x||_1
+$$
+
+#### Adversarial discriminators
+
+同时借助了生成对抗思想来进一步指导$(E(x),E(\bar x)),(G(E(x),\bar x))$的学习
+$$
+\min\limits_{E,D}\max\limits_{D_I}L_{ga}=\log D_I(\bar x|x)+log(1-D_I(G(E(x))|x))
+\\
+\min\limits_E\max\limits_{D_F} L_{fa}=\log D_F(E(\bar x))+\log (1-D_F(E(x)))
+$$
+
+### 实验
+
+Synth90作为训练集
+
+使用不同种类的clean image作为监督信息
+
+img size ：32 × 100
+
+intensities： [-1,1]
+
+batch size: 32
+
+#### Ablation Study
+
+修改clean image的类型以及网络的组成部分
+
+### 新词汇
 
 |                                          |              |
 | :--------------------------------------- | ------------ |
@@ -56,6 +102,9 @@ E和D一起组成了一个常规的文字识别网络，这一部分的实现是
 | end-to-end fashion                       |              |
 | aforementioned                           |              |
 | auxiliary                                | 辅助的       |
+| deskewed                                 | 歪斜的       |
+
+
 
 
 

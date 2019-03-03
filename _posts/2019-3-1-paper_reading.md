@@ -29,7 +29,7 @@ icon: icon-html
 
 给定一个`y="ANODIZING"`经过两个不同分支分别产生一个synthetic image和一个clean image，然后通过encoder产生$f$和$\hat f$，$f$分别经过text decoder T和image generator G，生成$\hat x$以及$\hat y$至此整个前向过程结束，网络产生3个loss，分别是$(\hat y,y),(\hat x,\bar x),(\hat f,f)$
 
-对encoder的要求服从两个原则，第一个是不变，这要求E对$(\hat x,\bar x)$产生的特征是一样的，第二个原则是完备，即存在一个生成器能够从特征生成回原图。
+对encoder的要求服从两个原则，第一个是不变，这要求E对$(\hat x,\bar x)​$产生的特征是一样的，第二个原则是完备，即存在一个生成器能够从特征生成回原图。
 
 这两个原则看起来就很有道理，然后可以很好的把图片生成的过程利用起来，使网络学习到不带特殊变形的参数，同时可以得到一个很好的图像识别模型
 

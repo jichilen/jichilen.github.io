@@ -140,3 +140,9 @@ UTF-8
 
 可以看到上面这个实验说明了所有不同现象的原因
 
+此外在tmux中也会发现这个问题
+
+locate charmap
+
+发现修改`export LANG=zh_CN.UTF-8`可以解决问题
+

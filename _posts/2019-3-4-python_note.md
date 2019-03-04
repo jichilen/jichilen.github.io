@@ -109,5 +109,34 @@ Type "help", "copyright", "credits" or "license" for more information.
 ?鲫刻孛廊菝捞逖?
 >>> print(u'"\u4e3d\u6615\u7279\u7f8e\u5bb9\u7f8e\u4f53\u517b\u751f"')
 "丽昕特美容美体养生"
+print(u"a\u4e3d\u6615\u7279\u7f8e\u5bb9\u7f8e\u4f53\u517b\u751f")
+a丽昕特美容美体养生
 ```
+
+
+
+
+
+```python
+#运行下面代码进行实验
+import sys
+print(sys.getdefaultencoding())
+#python2 
+ascii
+#python3 
+utf-8
+
+
+import sys
+print(sys.stdin.encoding)
+#cmd python2 python3 
+cp936
+#xshell python2
+ANSI_X3.4-1968
+#pytcharm python2 python3
+UTF-8
+
+```
+
+可以看到上面这个实验说明了所有不同现象的原因
 

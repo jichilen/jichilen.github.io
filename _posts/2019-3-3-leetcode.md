@@ -15,7 +15,7 @@ problem 4
 
 There are two sorted arrays **nums1** and **nums2** of size m and n respectively.
 
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+Find the median of the two sorted arrays. The overall run time complexity should be $O(log (m+n))$.
 
 You may assume **nums1** and **nums2** cannot be both empty.
 
@@ -36,6 +36,58 @@ nums2 = [3, 4]
 
 The median is (2 + 3)/2 = 2.5
 ```
+
+答案要求复杂度为$O(log (m+n))$很容易可以想到我们需要用二分法来解决这个问题
+
+其次问题是找中值，所以我们需要将数据切成两份
+
+> nums1:   1 2 3 4 5 6 7 8 9   (9)
+>
+> ​            :                $\uparrow$ 
+>
+> nums2:   2 3 5 8 9                (5)
+>
+> ​            :      $\uparrow$  
+>
+> nums1:   1 2 3 4 5 6 7 8 9   (9)
+>
+> ​            :          $\uparrow$ 
+>
+> nums2:   2 3 5 8 9                (5)
+>
+> ​            :             $\uparrow$ 
+>
+> nums1:   1 2 3 4 5 6 7 8 9   (9)
+>
+> ​            :             $\uparrow$ 
+>
+> nums2:   2 3 5 8 9                (5)
+>
+> ​            :          $\uparrow$ 
+
+大致的问题解决了，下面需要思考的问题是奇偶数的问题，下标越界的问题
+
+> condition 1:
+>
+> nums1:   1 2 3 4 5 6 7 8 9   (9)
+>
+> ​            :                             $\uparrow$ 
+>
+> nums2:   2 3 5 8 9                (5)
+>
+>
+>
+> condition 2:
+>
+> nums1:   1 2 3 4 5 6 7 8   (8)
+>
+> ​            :             $\uparrow$ 
+>
+> nums2:   2 3 5 8 9             (5)
+>
+> ​            :          $\uparrow$ 
+>
+>
 
 ```python
 class Solution:

@@ -117,7 +117,7 @@ coco存储数据用的是一个字典字典里面有三个键：`"images", "cate
 > ​		[
 >
 > ​		area:
-> ​		bbox: #[45, 56, 91, 29]
+> ​		bbox: #[x1,y1,w,h]
 > ​		category_id:
 > ​		id:
 > ​		image_id:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "leetcode"
-date:   2019-3-7
+date:   2019-3-8
 desc: "leetcode problem"
 keywords: "python"
 categories: [PYTHON]

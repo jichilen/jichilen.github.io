@@ -127,6 +127,65 @@ class Solution:
 
 代码很简单，键值表达的意思是左括号的数量，通过循环的数量可以算出右括号的数量`i+1-ke​`，这样可以很轻松的遍历所有的情况
 
+### 23. Merge k Sorted Lists
+
+Hard
+
+Merge *k* sorted linked lists and return it as one sorted list. Analyze and describe its complexity.
+
+**Example:**
+
+```
+Input:
+[
+  1->4->5,
+  1->3->4,
+  2->6
+]
+Output: 1->1->2->3->4->4->5->6
+```
+
+
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+        if len(lists)<2:
+            return lists
+        elif len(lists)==2:
+            p1=lists[0]
+            p2=lists[1]
+            n=ListNode(0)
+            n.next=p1
+            p1=n
+            while p1.next and p2:
+                if p1.next.val>p2:
+                    tmp=p1.next
+                    p1.next=p2
+                    p2=p2.next
+                    p1.next.next=tmp
+                else:
+                    p1=p1.next
+            if p2:
+                p1.next=p2
+            return p1.next
+        else:
+            med=int((len(lists)+1)/2)
+            p1=self.mergeKLists(lists[:med])
+            p2=self.mergeKLists(lists[med:])
+            return self.mergeKLists([p1,p2])
+		
+            
+```
+
+
+
 ### 25. Reverse Nodes in k-Group
 
 Hard

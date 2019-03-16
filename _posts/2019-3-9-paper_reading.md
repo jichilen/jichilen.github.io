@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Generalized Intersection over Union: A Metric and A Loss for Bounding Box Regression"
-date:   2019-3-1
+date:   2019-3-9
 desc: "Generalized Intersection over Union: A Metric and A Loss for Bounding Box Regression"
 keywords: "python"
 categories: [Html]

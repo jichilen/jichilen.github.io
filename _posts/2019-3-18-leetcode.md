@@ -9,6 +9,8 @@ tags: [python,coding,leetcode ]
 icon: icon-html
 ---
 
+problem 26,27,28,29
+
 ### 26.Remove Duplicates from Sorted Array
 
 easy

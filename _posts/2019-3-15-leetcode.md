@@ -9,6 +9,8 @@ tags: [python,coding,leetcode ]
 icon: icon-html
 ---
 
+problem 24,25
+
 ### 24. Swap Nodes in Pairs
 
 Medium

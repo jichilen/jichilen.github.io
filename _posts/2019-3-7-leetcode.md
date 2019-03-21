@@ -9,6 +9,8 @@ tags: [python,coding,leetcode ]
 icon: icon-html
 ---
 
+problem 8,9,10
+
 ### 8. String to Integer (atoi)
 
 Medium

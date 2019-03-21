@@ -5,7 +5,7 @@ date:   2019-3-16
 desc: "Object Detection based on Region Decomposition and Assembly"
 keywords: "python"
 categories: [Html]
-tags: [reading]
+tags: [reading,feature extract]
 icon: icon-html
 ---
 

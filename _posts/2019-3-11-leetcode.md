@@ -9,6 +9,8 @@ tags: [python,coding,leetcode ]
 icon: icon-html
 ---
 
+problem 16,17,18,19,20
+
 ### 16. 3Sum Closest
 
 Medium

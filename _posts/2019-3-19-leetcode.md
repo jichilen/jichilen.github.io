@@ -9,3 +9,5 @@ tags: [python,coding,leetcode ]
 icon: icon-html
 ---
 
+problem 30
+

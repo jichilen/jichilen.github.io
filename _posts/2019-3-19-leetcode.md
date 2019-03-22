@@ -5,7 +5,7 @@ date:   2019-3-19
 desc: "leetcode problem"
 keywords: "python"
 categories: [PYTHON]
-tags: [python,coding,leetcode ]
+tags: [python,coding,leetcode,hash table,string]
 icon: icon-html
 ---
 
@@ -118,4 +118,4 @@ class Solution:
         return out
 ```
 
-1664 ms ->304 ms
+1664 ms ->304 ms(144 ms)

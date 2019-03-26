@@ -9,7 +9,7 @@ tags: [python,coding,leetcode,array]
 icon: icon-html
 ---
 
-problem 31
+problem 31,32
 
 ### 31. Next Permutation
 
@@ -99,14 +99,32 @@ Explanation: The longest valid parentheses substring is "()()"
 
 有效括号的解决思路是使用栈
 
-要求最长有效括号，需要多个栈，这种思路行不通
+要求最长有效括号，需要考虑中间所有的配对情况
 
 ```python
 class Solution:
-    def longestValidParentheses(self, s: str) -> int:
-        lmax=-1
-        pend=0
-        st=[]
-        for
+    def longestValidParentheses(self, s):
+        """
+        :type s: str
+        :rtype: int
+        """
+        stack = []  
+        start = 0   
+        res = 0    
+        for i in range(len(s)):
+            if s[i] == "(":
+                stack.append(i)
+            else:
+                if not stack:
+                    res = max(res, i-start)
+                    start = i+1
+                    continue
+                else:
+                    stack.pop()
+                    if not stack:
+                        res = max(res, i-start+1)
+                    if stack:
+                        res = max(res, i-stack[-1])
+        return res
 ```
 

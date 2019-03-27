@@ -70,3 +70,25 @@ class Solution:
         return sort(nums,target,0,len(nums)-1)
 ```
 
+简化的写法
+
+```python
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        def search(nums,target,fl):
+            low=0
+            high=len(nums)
+            while low<high:
+                mid=int((low+high)/2)
+                if nums[mid]>target or (nums[mid]==target and fl):
+                    high=mid
+                else:
+                    low=mid+1
+            return low
+        l=search(nums,target,1)
+        r=search(nums,target,0)-1
+        if(l>r):return [-1,-1]
+        return [l,r]
+```
+
+这里要注意边界的判断，mid=int((low+high)/2)，所以mid会接近low bound，所以high=mid是可以的，但是low=mid是不行的，会进入死循环

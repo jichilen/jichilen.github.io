@@ -9,7 +9,7 @@ tags: [python,coding,leetcode,array，dynamic programing]
 icon: icon-html
 ---
 
-problem 42
+problem 42,43,44,45
 
 ### 42. Trapping Rain Water
 
@@ -196,5 +196,61 @@ class Solution:
                 elif p[j] == '?' or s[i] == p[j]:
                     dp[i+1][j + 1] = dp[i][j]
         return dp[m][n]
+```
+
+#### 45. Jump Game II
+
+Hard
+
+Given an array of non-negative integers, you are initially positioned at the first index of the array.
+
+Each element in the array represents your maximum jump length at that position.
+
+Your goal is to reach the last index in the minimum number of jumps.
+
+**Example:**
+
+```
+Input: [2,3,1,1,4]
+Output: 2
+Explanation: The minimum number of jumps to reach the last index is 2.
+    Jump 1 step from index 0 to 1, then 3 steps to the last index.
+```
+
+解法一：递归，每次跳到下一次能调到最远的地方
+
+```python
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+        if len(nums)==1:return 0
+        def jump_once(pre_id):
+            if nums[pre_id]+pre_id>=len(nums)-1:
+                return 1
+            max_id=0
+            max_j=0
+            print(pre_id)
+            for i in range(1,nums[pre_id]+1):
+                if max_j<nums[pre_id+i]-(nums[pre_id]-i):
+                    max_j=nums[pre_id+i]-(nums[pre_id]-i)
+                    max_id=i
+            out=jump_once(max_id+pre_id)
+            return out+1
+        return jump_once(0)
+        
+```
+
+迭代：相比于上面的方法能够减少迭代次数，很多重复去的地方不用重复去
+
+```python
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+        n, cur_max, next_max, steps = len(nums), 0, 0, 0
+        for i in range(n):
+            if i > cur_max:
+                steps += 1
+                cur_max = next_max
+                if cur_max >= n: break
+            next_max = max(next_max, nums[i] + i)
+        return steps
 ```
 

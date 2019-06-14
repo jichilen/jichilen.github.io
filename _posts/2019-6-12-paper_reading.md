@@ -5,7 +5,7 @@ date:   2019-6-12
 desc: "Bottom-up Object Detection by Grouping Extreme and Center Points"
 keywords: "python"
 categories: [Html]
-tags: [reading,text,curve]
+tags: [reading,object,points]
 icon: icon-html
 ```
 
@@ -59,9 +59,9 @@ icon: icon-html
 
 > 综合上面的考虑，使用这着极值点来做检测有着下面几个明显的问题
 >
-> - [ ] 水平或者垂直边缘
-> - [ ] 极值点的分组（聚合）
-> - [ ] 错误的匹配结果的几何中心正好落在中心点的高响应区域
+> - [x] 水平或者垂直边缘
+> - [x] 极值点的分组（聚合）
+> - [x] 错误的匹配结果的几何中心正好落在中心点的高响应区域
 > - [ ] 漏检
-> - [ ] 后处理算法复杂度过高
-> - [ ] 标注
+> - [x] 后处理算法复杂度过高
+> - [x] 标注
